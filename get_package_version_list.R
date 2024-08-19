@@ -12,6 +12,9 @@ get_package_version_list <- function(repo_path) {
   
   commit_hashes <- sapply(commit_list, function(commit) commit$sha)
   
+  
   #return data.frame
   return(commit_hashes)
+  
+  
 }
