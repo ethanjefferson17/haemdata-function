@@ -1,7 +1,6 @@
 library(testthat)
 library(git2r)
 library(reprex)
-library(covr)
 
 # Mock function for readRDS
 mock_readRDS <- function(file) {
@@ -21,6 +20,7 @@ test_that("get_pin_versions_by_hash works correctly", {
     `git2r::revparse_single` = function(...) list(sha = function() "abcdef1234567890"),
     `git2r::sha` = function(...) "abcdef1234567890",
     readRDS = mock_readRDS,
+    dir.exists = function(...) TRUE,  # Mock dir.exists to always return TRUE
     {
       # Test with specific commit hash
       result1 <- get_pin_versions_by_hash("/path/to/repo", "specific_hash")
@@ -36,15 +36,23 @@ test_that("get_pin_versions_by_hash works correctly", {
       expect_equal(result2$pin1, "1.0.0")
       expect_equal(result2$pin2, "2.0.0")
     }
-    )
-  })
+  )
+})
 
 # Test error handling
 test_that("get_pin_versions_by_hash handles errors", {
-  expect_error(
-    get_pin_versions_by_hash("/non/existent/path")
+  # Test non-existent path
+  with_mock(
+    dir.exists = function(...) FALSE,
+    {
+      expect_error(
+        get_pin_versions_by_hash("/non/existent/path"),
+        "The system cannot find the path specified"
+      )
+    }
   )
 })
+  
 
 #test_file code / run in terminal
 #test_file("C:/Users/jefferson.et/Documents/Rstudio/Version Control

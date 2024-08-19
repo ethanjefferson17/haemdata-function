@@ -4,7 +4,12 @@ library(reprex)
 
 # Function to get pin versions by commit hash
 get_pin_versions_by_hash <- function(repo_path, commit_hash = NULL) {
-   if (!is.null(commit_hash)) {
+  #check if repo_path exists
+  if (!dir.exists(repo_path)) {
+    stop("The system cannot find the path specified")
+  }
+  
+  if (!is.null(commit_hash)) {
       
       # Check out the specific commit
       repo <- repository(repo_path)
@@ -33,6 +38,9 @@ get_pin_versions_by_hash <- function(repo_path, commit_hash = NULL) {
   
   
 }
+
+
+
 
 
 
