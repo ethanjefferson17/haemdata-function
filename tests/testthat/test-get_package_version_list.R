@@ -17,6 +17,7 @@ test_that("get_package_version_list works correctly", {
   with_mock(
     `git2r::repository` = function(...) mock_repo,
     `git2r::commits` = function(...) mock_commits,
+    dir.exists = function(...) TRUE,  # Mock dir.exists to always return TRUE
     {
       result <- get_package_version_list("/path/to/repo")
       
@@ -47,8 +48,9 @@ test_that("get_package_version_list handles an empty repository", {
   with_mock(
     `git2r::repository` = function(...) mock_repo,
     `git2r::commits` = function(...) mock_commits,
+    dir.exists = function(...) TRUE,  # Mock dir.exists to always return TRUE
     {
-      result <- get_package_version_list("/empty/repo")
+      result <- get_package_version_list("/path/to/repo")
       
       # Check that the result is a character vector
       expect_type(result, "list")
@@ -59,21 +61,19 @@ test_that("get_package_version_list handles an empty repository", {
   )
 })
 
-# Test non-existent repository
+# Test error handling
 test_that("get_pin_versions_by_hash handles errors", {
   # Test non-existent path
   with_mock(
     dir.exists = function(...) FALSE,
     {
       expect_error(
-        get_pin_versions_by_hash("/non/existent/path"),
+        get_package_version_list("/non/existent/path"),
         "The system cannot find the path specified"
       )
     }
   )
 })
-
-
 
 
 
