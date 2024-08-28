@@ -1,5 +1,9 @@
 # Functions for Haemdata
 
+<!-- badges: start -->
+  [![Codecov test coverage](https://codecov.io/gh/ethanjefferson17/haemdata-function/graph/badge.svg)](https://app.codecov.io/gh/ethanjefferson17/haemdata-function)
+  <!-- badges: end -->
+
 ## Description
 
 The functions created are used in Haemdata to allow the user to access and use old versions of the Hemdata package and old pin versions of the data collected through Haemdata
