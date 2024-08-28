@@ -1,9 +1,5 @@
 # Functions for Haemdata
 
-<!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/ethanjefferson17/haemdata-function/graph/badge.svg)](https://app.codecov.io/gh/ethanjefferson17/haemdata-function)
-<!-- badges: end -->
-
 
 ## Description
 
