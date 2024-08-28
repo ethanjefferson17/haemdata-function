@@ -1,7 +1,9 @@
 # Functions for Haemdata
 
 <!-- badges: start -->
-  [![Codecov test coverage](https://codecov.io/gh/ethanjefferson17/haemdata-function/graph/badge.svg)](https://app.codecov.io/gh/ethanjefferson17/haemdata-function)
+[![Run Tests and Coverage](https://github.com/your-username/your-repo-name/actions/workflows/run-tests.yaml/badge.svg)](https://github.com/your-username/your-repo-name/actions/workflows/run-tests.yaml)
+[![codecov](https://codecov.io/gh/your-username/your-repo-name/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/your-repo-name)
+
   <!-- badges: end -->
 
 ## Description
