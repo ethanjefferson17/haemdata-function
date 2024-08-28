@@ -8,7 +8,7 @@ The functions created are used in Haemdata to allow the user to access and use o
 
 ### get_pin_versions_by_hash
 
--   The first function allows for the user to get a list of all the pins and their versions when the repo_path and the git hash are provided
+-   The get_pin_versions_by_hash function allows for the user to get a list of all the pins and their versions when the repo_path and the git hash are provided
 
 -   To be able to run this function you must have the git2r package installed
 
