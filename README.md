@@ -1,8 +1,8 @@
 # Functions for Haemdata
 
 <!-- badges: start -->
-[![Run Tests and Coverage](https://github.com/ethanjefferson17/haemdata-function/actions/workflows/run-tests.yaml/badge.svg)](https://github.com/your-username/your-repo-name/actions/workflows/run-tests.yaml)
-[![codecov](https://codecov.io/gh/your-username/your-repo-name/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/your-repo-name)
+[![Run Tests and Coverage](https://github.com/ethanjefferson17/haemdata-function/actions/workflows/run-tests.yaml/badge.svg)](https://github.com/ethanjefferson17/haemdata-function/actions/workflows/run-tests.yaml)
+[![codecov](https://codecov.io/gh/ethanjefferson17/haemdata-function/branch/main/graph/badge.svg)](https://codecov.io/gh/ethanjefferson17/haemdata-function)
 
   <!-- badges: end -->
 
