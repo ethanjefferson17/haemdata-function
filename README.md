@@ -3,7 +3,7 @@
 
 ## Description
 
-The functions created are used in Haemdata to allow the user to access and use old versions of the Hemdata package and old pin versions of the data collected through Haemdata
+The functions created are used in Haemdata to allow the user to access and use old versions of the Haemdata package and old pin versions of the data collected through Haemdata
 
 ## Usage
 
